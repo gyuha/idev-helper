@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B19C7E2135C170900A7AF59 /* CoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B19C7E1135C170900A7AF59 /* CoverFlowView.m */; };
+		6B19C7EC135C177300A7AF59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B19C7EB135C177300A7AF59 /* QuartzCore.framework */; };
+		6B19C7F0135D4BD900A7AF59 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B19C7EF135D4BD900A7AF59 /* CoverView.m */; };
+		6B19C7F3135D4C6F00A7AF59 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B19C7F2135D4C6F00A7AF59 /* UIImage+Reflection.m */; };
+		6B8BD2481365115500F079B2 /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B8BD2471365115500F079B2 /* cover.jpg */; };
+		6BFEC856135C141F00FB1568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFEC855135C141F00FB1568 /* UIKit.framework */; };
+		6BFEC858135C141F00FB1568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFEC857135C141F00FB1568 /* Foundation.framework */; };
+		6BFEC85A135C141F00FB1568 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFEC859135C141F00FB1568 /* CoreGraphics.framework */; };
+		6BFEC860135C141F00FB1568 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BFEC85E135C141F00FB1568 /* InfoPlist.strings */; };
+		6BFEC863135C141F00FB1568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFEC862135C141F00FB1568 /* main.m */; };
+		6BFEC866135C141F00FB1568 /* coverFlowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFEC865135C141F00FB1568 /* coverFlowAppDelegate.m */; };
+		6BFEC869135C141F00FB1568 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFEC867135C141F00FB1568 /* MainWindow.xib */; };
+		6BFEC86C135C141F00FB1568 /* coverFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFEC86B135C141F00FB1568 /* coverFlowViewController.m */; };
+		6BFEC86F135C141F00FB1568 /* coverFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFEC86D135C141F00FB1568 /* coverFlowViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B19C7E0135C170900A7AF59 /* CoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowView.h; sourceTree = "<group>"; };
+		6B19C7E1135C170900A7AF59 /* CoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowView.m; sourceTree = "<group>"; };
+		6B19C7EB135C177300A7AF59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6B19C7EE135D4BD900A7AF59 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
+		6B19C7EF135D4BD900A7AF59 /* CoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
+		6B19C7F1135D4C6F00A7AF59 /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
+		6B19C7F2135D4C6F00A7AF59 /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
+		6B8BD2471365115500F079B2 /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover.jpg; path = images/cover.jpg; sourceTree = "<group>"; };
+		6BFEC851135C141F00FB1568 /* coverFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coverFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFEC855135C141F00FB1568 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6BFEC857135C141F00FB1568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BFEC859135C141F00FB1568 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BFEC85D135C141F00FB1568 /* coverFlow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "coverFlow-Info.plist"; sourceTree = "<group>"; };
+		6BFEC85F135C141F00FB1568 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BFEC861135C141F00FB1568 /* coverFlow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coverFlow-Prefix.pch"; sourceTree = "<group>"; };
+		6BFEC862135C141F00FB1568 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BFEC864135C141F00FB1568 /* coverFlowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coverFlowAppDelegate.h; sourceTree = "<group>"; };
+		6BFEC865135C141F00FB1568 /* coverFlowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coverFlowAppDelegate.m; sourceTree = "<group>"; };
+		6BFEC868135C141F00FB1568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6BFEC86A135C141F00FB1568 /* coverFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coverFlowViewController.h; sourceTree = "<group>"; };
+		6BFEC86B135C141F00FB1568 /* coverFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coverFlowViewController.m; sourceTree = "<group>"; };
+		6BFEC86E135C141F00FB1568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/coverFlowViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BFEC84E135C141F00FB1568 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B19C7EC135C177300A7AF59 /* QuartzCore.framework in Frameworks */,
+				6BFEC856135C141F00FB1568 /* UIKit.framework in Frameworks */,
+				6BFEC858135C141F00FB1568 /* Foundation.framework in Frameworks */,
+				6BFEC85A135C141F00FB1568 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B19C7DE135C16EA00A7AF59 /* coverFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6B19C7E0135C170900A7AF59 /* CoverFlowView.h */,
+				6B19C7E1135C170900A7AF59 /* CoverFlowView.m */,
+				6B19C7EE135D4BD900A7AF59 /* CoverView.h */,
+				6B19C7EF135D4BD900A7AF59 /* CoverView.m */,
+				6B19C7F1135D4C6F00A7AF59 /* UIImage+Reflection.h */,
+				6B19C7F2135D4C6F00A7AF59 /* UIImage+Reflection.m */,
+			);
+			path = coverFlow;
+			sourceTree = "<group>";
+		};
+		6B19C810135EA6E400A7AF59 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6B8BD2471365115500F079B2 /* cover.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		6BFEC846135C141F00FB1568 = {
+			isa = PBXGroup;
+			children = (
+				6B19C7EB135C177300A7AF59 /* QuartzCore.framework */,
+				6BFEC85B135C141F00FB1568 /* coverFlow */,
+				6BFEC854135C141F00FB1568 /* Frameworks */,
+				6BFEC852135C141F00FB1568 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BFEC852135C141F00FB1568 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BFEC851135C141F00FB1568 /* coverFlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BFEC854135C141F00FB1568 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BFEC855135C141F00FB1568 /* UIKit.framework */,
+				6BFEC857135C141F00FB1568 /* Foundation.framework */,
+				6BFEC859135C141F00FB1568 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BFEC85B135C141F00FB1568 /* coverFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6B19C810135EA6E400A7AF59 /* images */,
+				6B19C7DE135C16EA00A7AF59 /* coverFlow */,
+				6BFEC864135C141F00FB1568 /* coverFlowAppDelegate.h */,
+				6BFEC865135C141F00FB1568 /* coverFlowAppDelegate.m */,
+				6BFEC867135C141F00FB1568 /* MainWindow.xib */,
+				6BFEC86A135C141F00FB1568 /* coverFlowViewController.h */,
+				6BFEC86B135C141F00FB1568 /* coverFlowViewController.m */,
+				6BFEC86D135C141F00FB1568 /* coverFlowViewController.xib */,
+				6BFEC85C135C141F00FB1568 /* Supporting Files */,
+			);
+			path = coverFlow;
+			sourceTree = "<group>";
+		};
+		6BFEC85C135C141F00FB1568 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BFEC85D135C141F00FB1568 /* coverFlow-Info.plist */,
+				6BFEC85E135C141F00FB1568 /* InfoPlist.strings */,
+				6BFEC861135C141F00FB1568 /* coverFlow-Prefix.pch */,
+				6BFEC862135C141F00FB1568 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BFEC850135C141F00FB1568 /* coverFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BFEC872135C141F00FB1568 /* Build configuration list for PBXNativeTarget "coverFlow" */;
+			buildPhases = (
+				6BFEC84D135C141F00FB1568 /* Sources */,
+				6BFEC84E135C141F00FB1568 /* Frameworks */,
+				6BFEC84F135C141F00FB1568 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = coverFlow;
+			productName = coverFlow;
+			productReference = 6BFEC851135C141F00FB1568 /* coverFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BFEC848135C141F00FB1568 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = dreamers;
+			};
+			buildConfigurationList = 6BFEC84B135C141F00FB1568 /* Build configuration list for PBXProject "coverFlow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BFEC846135C141F00FB1568;
+			productRefGroup = 6BFEC852135C141F00FB1568 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BFEC850135C141F00FB1568 /* coverFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BFEC84F135C141F00FB1568 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFEC860135C141F00FB1568 /* InfoPlist.strings in Resources */,
+				6BFEC869135C141F00FB1568 /* MainWindow.xib in Resources */,
+				6BFEC86F135C141F00FB1568 /* coverFlowViewController.xib in Resources */,
+				6B8BD2481365115500F079B2 /* cover.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BFEC84D135C141F00FB1568 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFEC863135C141F00FB1568 /* main.m in Sources */,
+				6BFEC866135C141F00FB1568 /* coverFlowAppDelegate.m in Sources */,
+				6BFEC86C135C141F00FB1568 /* coverFlowViewController.m in Sources */,
+				6B19C7E2135C170900A7AF59 /* CoverFlowView.m in Sources */,
+				6B19C7F0135D4BD900A7AF59 /* CoverView.m in Sources */,
+				6B19C7F3135D4C6F00A7AF59 /* UIImage+Reflection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6BFEC85E135C141F00FB1568 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BFEC85F135C141F00FB1568 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6BFEC867135C141F00FB1568 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BFEC868135C141F00FB1568 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		6BFEC86D135C141F00FB1568 /* coverFlowViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BFEC86E135C141F00FB1568 /* en */,
+			);
+			name = coverFlowViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BFEC870135C141F00FB1568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6BFEC871135C141F00FB1568 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		6BFEC873135C141F00FB1568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "coverFlow/coverFlow-Prefix.pch";
+				INFOPLIST_FILE = "coverFlow/coverFlow-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BFEC874135C141F00FB1568 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "coverFlow/coverFlow-Prefix.pch";
+				INFOPLIST_FILE = "coverFlow/coverFlow-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BFEC84B135C141F00FB1568 /* Build configuration list for PBXProject "coverFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFEC870135C141F00FB1568 /* Debug */,
+				6BFEC871135C141F00FB1568 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BFEC872135C141F00FB1568 /* Build configuration list for PBXNativeTarget "coverFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFEC873135C141F00FB1568 /* Debug */,
+				6BFEC874135C141F00FB1568 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BFEC848135C141F00FB1568 /* Project object */;
+}
