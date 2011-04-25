@@ -24,6 +24,7 @@
  * 슬라이드 배경 색
  */
 - (UIColor*)slideMenuBackgroundColor:(SlideMenuView*)slideMenuView;
+- (Boolean) enableItem:(SlideMenuView*)slideMenuView;
 
 @end
 

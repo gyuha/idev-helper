@@ -35,12 +35,13 @@
         [thumbnails addObject:[NSString stringWithFormat:@"%02d.jpg", i+1]];
     }
 
-    SlideMenuView *slview = [[SlideMenuView alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 320.0f,  80.0f)];
+    SlideMenuView *slview = [[SlideMenuView alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 320.0f,  110.0f)];
     slview.delegate = self;
     slview.backgroundColor = [UIColor redColor];
     slview.selectedColor = [UIColor blueColor];
     slview.borderDeep = 5.0f;
     slview.selectedItem = 2;
+    slview.imageSize = CGSizeMake(60, 85);
     [slview reloadData];
     [self.view addSubview:slview];
     

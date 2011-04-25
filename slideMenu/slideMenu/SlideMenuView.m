@@ -54,6 +54,27 @@ selectedItem = _seletctedItem;
 }
 
 /**
+ * 이미지에 보더 공간을 준다.
+ */
+-(UIImage*)imageBoarder:(UIImage*)inImage { 
+    int w = inImage.size.width + (_borderDeep*2);
+    int h = inImage.size.height + (_borderDeep*2);
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+
+
+    CGContextDrawImage(context, CGRectMake(_borderDeep, _borderDeep, inImage.size.width, inImage.size.height), inImage.CGImage);
+    CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0);
+    
+    CGImageRef image = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+
+    return [UIImage imageWithCGImage:image];
+}
+
+/**
  * View의 내용을 갱신
  */
 - (void) reloadData
@@ -68,15 +89,16 @@ selectedItem = _seletctedItem;
     NSInteger tag = 0;
     NSArray *imgArray = [self.delegate slideMenuViewImages:self];
     for (NSString *fileName in imgArray) {
-        float x = totalButtonWidth + _imageMargin;        
-        CGRect buttonRect = CGRectMake(x, _topMargin, _imageSize.width, _imageSize.height);
+        float x = totalButtonWidth + _imageMargin + (_borderDeep*2);
+        CGRect buttonRect = CGRectMake(x, _topMargin, _imageSize.width+(_borderDeep*2), _imageSize.height+(_borderDeep*2));
         UIButton *button = [[UIButton alloc] initWithFrame:buttonRect];
         button.tag = tag;
         [button addTarget:self action:@selector(onButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        UIImage *image = [UIImage imageNamed:fileName];        
-        [button setBackgroundImage:image forState:UIControlStateNormal];
+        UIImage *image = [self imageBoarder:[UIImage imageNamed:fileName]];
+        [button setImage:image forState:UIControlStateNormal];
+        button.enabled = YES;
         [menuScrollView addSubview:button];
-        totalButtonWidth = totalButtonWidth + _imageSize.width + _imageMargin;
+        totalButtonWidth = totalButtonWidth + _imageSize.width + _imageMargin + (_borderDeep*2);
         tag++;
     }
     [menuScrollView setContentSize:CGSizeMake(totalButtonWidth+_imageMargin, self.frame.size.height)];

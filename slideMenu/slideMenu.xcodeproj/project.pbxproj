@@ -56,7 +56,6 @@
 		6BE0F851135438DF00FA3A7F /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 08.jpg; path = resource/08.jpg; sourceTree = "<group>"; };
 		6BE0F852135438DF00FA3A7F /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 09.jpg; path = resource/09.jpg; sourceTree = "<group>"; };
 		6BE0F853135438DF00FA3A7F /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 10.jpg; path = resource/10.jpg; sourceTree = "<group>"; };
-		6BE0F85E1354399E00FA3A7F /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +102,6 @@
 		6B2360071353E03900B03A93 /* slideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				6BE0F85E1354399E00FA3A7F /* Macros.h */,
 				6BE0F849135438BD00FA3A7F /* thumbnails */,
 				6B2360101353E03900B03A93 /* slideMenuAppDelegate.h */,
 				6B2360111353E03900B03A93 /* slideMenuAppDelegate.m */,
