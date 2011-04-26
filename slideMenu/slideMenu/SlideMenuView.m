@@ -54,24 +54,39 @@ selectedItem = _seletctedItem;
 }
 
 /**
- * 이미지에 보더 공간을 준다.
+ * 이미지를 지정한다.
  */
--(UIImage*)imageBoarder:(UIImage*)inImage { 
+-(UIImage*)setMenuImage:(UIImage*)inImage isColor:(Boolean)bColor{ 
     int w = inImage.size.width + (_borderDeep*2);
     int h = inImage.size.height + (_borderDeep*2);
     
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
-
+    CGColorSpaceRef colorSpace;
+    CGContextRef context;
+    if ( YES == bColor) {
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+        context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    }else{
+        colorSpace = CGColorSpaceCreateDeviceGray();
+        context = CGBitmapContextCreate(NULL, w, h, 8, w, colorSpace, kCGImageAlphaNone);        
+    }
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
 
     CGContextDrawImage(context, CGRectMake(_borderDeep, _borderDeep, inImage.size.width, inImage.size.height), inImage.CGImage);
-    CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0);
     
     CGImageRef image = CGBitmapContextCreateImage(context);
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
 
     return [UIImage imageWithCGImage:image];
+}
+
+-(Boolean) isEnable:(NSInteger)index
+{
+    Boolean isEnable = YES;
+    if ([self.delegate respondsToSelector:@selector(slideMenuEnableItem:index:)]) {
+        isEnable = [self.delegate slideMenuEnableItem:self index:index];
+    }
+    return isEnable;
 }
 
 /**
@@ -94,7 +109,7 @@ selectedItem = _seletctedItem;
         UIButton *button = [[UIButton alloc] initWithFrame:buttonRect];
         button.tag = tag;
         [button addTarget:self action:@selector(onButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        UIImage *image = [self imageBoarder:[UIImage imageNamed:fileName]];
+        UIImage *image = [self setMenuImage:[UIImage imageNamed:fileName] isColor:[self isEnable:tag]];
         [button setImage:image forState:UIControlStateNormal];
         button.enabled = YES;
         [menuScrollView addSubview:button];
@@ -108,7 +123,11 @@ selectedItem = _seletctedItem;
 
 -(void)onButtonClick:(id)sender
 {
-    _seletctedItem = ((UIButton*)sender).tag;
+    NSInteger index = ((UIButton*)sender).tag;
+    if ([self isEnable:index] == NO) {
+        return;
+    }
+    _seletctedItem = index;
     [self.delegate slideMenuViewClick:self selectIndex:_seletctedItem];
     [self updateSeletedButton];
 }

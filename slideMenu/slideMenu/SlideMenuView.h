@@ -23,8 +23,8 @@
 /**
  * 슬라이드 배경 색
  */
-- (UIColor*)slideMenuBackgroundColor:(SlideMenuView*)slideMenuView;
-- (Boolean) enableItem:(SlideMenuView*)slideMenuView;
+- (UIColor*) slideMenuBackgroundColor:(SlideMenuView*)slideMenuView;
+- (BOOL) slideMenuEnableItem:(SlideMenuView*)slideMenuView index:(NSInteger)index;
 
 @end
 

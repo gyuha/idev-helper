@@ -66,6 +66,18 @@
     screenLabel.text = [NSString stringWithFormat:@"click : %d", ((UIButton*)sender).tag];
 }
 
+/**
+ * 아이템을 끄고 키고
+ */
+- (BOOL) slideMenuEnableItem:(SlideMenuView*)slideMenuView index:(NSInteger)index
+{
+    if (index < 3) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -78,5 +90,7 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 
 @end
